@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Mouse &amp; Trackpad</name>
+    <item>
+      <name>Use Button4 and Button5 as Back/Forward</name>
+      <item>
+        <name>Set 1: Button4 to Command+[ (Back)</name>
+        <identifier>remap.mouse_4_1</identifier>
+        <autogen>__KeyToKey__ PointingButton::BUTTON4, KeyCode::JIS_BRACKET_LEFT, ModifierFlag::COMMAND_L</autogen>
+      </item>
+      <item>
+        <name>Set 1: Button5 to Command+] (Forward)</name>
+        <identifier>remap.mouse_5_1</identifier>
+        <autogen>__KeyToKey__ PointingButton::BUTTON5, KeyCode::JIS_BRACKET_RIGHT, ModifierFlag::COMMAND_L</autogen>
+      </item>
+      <item>
+        <name>Set 2: Button4 to Control+Command+Left (XCode Back)</name>
+        <identifier>remap.mouse_4_2</identifier>
+        <autogen>__KeyToKey__ PointingButton::BUTTON4, KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L</autogen>
+      </item>
+      <item>
+        <name>Set 2: Button4 to Control+Command+Right (XCode Forward)</name>
+        <identifier>remap.mouse_5_2</identifier>
+        <autogen>__KeyToKey__ PointingButton::BUTTON5, KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L</autogen>
+      </item>
+    </item>
+  </item>
+  <item>
+    <name>For PC Users</name>
+    <item>
+      <name>Use PC Style New Tab</name>
+      <appendix>(Control+T to Command_L+T)</appendix>
+      <identifier>remap.pcstyle_newtab2</identifier>
+      <not>VIRTUALMACHINE,REMOTEDESKTOPCONNECTION,VNC,TEAMVIEWER</not>
+      <autogen>__KeyToKey__ KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
+    </item>
+    <item>
+      <name>Use PC Style Close</name>
+      <appendix>(Close window by control-w)</appendix>
+      <identifier>remap.pcstyle_close2</identifier>
+      <not>VIRTUALMACHINE,REMOTEDESKTOPCONNECTION,VNC,TEAMVIEWER</not>
+      <autogen>__KeyToKey__ KeyCode::W, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::W, ModifierFlag::COMMAND_L,
+      </autogen>
+    </item>
+  </item>
+</root>
