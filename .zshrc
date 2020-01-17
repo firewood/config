@@ -31,13 +31,12 @@ function get-git-current-branch-status {
   echo "%F{${color}}${branch_name}${message}%f "
 }
 
+autoload -U compinit
+compinit -u
+compdef g=git
+
 eval "$(rbenv init - zsh)"
 export PATH=$PATH:~/Applications
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-if [ $UID -eq 0 ]; then
-  # root user
-  PROMPT='%F{red}%n:%f%F{green}%d%f # '
-else
-  PROMPT='%F{yellow}%n:%f%~ `get-git-current-branch-status`%F{yellow}\$%f '
-fi
+PROMPT='%~ `get-git-current-branch-status`%F{yellow}\$%f '
 
