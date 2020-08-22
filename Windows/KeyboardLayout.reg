@@ -1,0 +1,12 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,\
+  07,00,00,00,\  ; number of DWORDs with NUL
+  01,00,29,00,\  ; 半/全(29) -> ESC(01)
+  1D,00,3A,00,\  ; 英数(3A) -> Ctrl(1D)
+  38,00,7B,00,\  ; 無変換(7B) -> 左Alt(38)
+  3A,00,38,E0,\  ; R-Alt(E038) -> 英数(3A)
+  38,E0,5D,E0,\  ; Application -> R-Alt
+  20,E0,01,00,\  ; ESC(01) -> Mute(E020)
+  00,00,00,00
